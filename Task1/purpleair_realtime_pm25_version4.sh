@@ -21,7 +21,7 @@ JSON=$(curl -s -X GET "$API_URL" \
   -H "Accept: application/json")
 
 if [ -z "$JSON" ]; then
-    echo "$(date) ❌ Empty API response" >> "$LOG_FILE"
+    echo "$(date) Empty API response" >> "$LOG_FILE"
     exit 1
 fi
 
@@ -39,7 +39,7 @@ LON=$(echo "$JSON" | jq '.sensor.longitude')
 
 # Validation check
 if [ "$PM25_10MIN" = "null" ]; then
-    echo "$(date) ❌ Critical data (PM2.5) missing from API response" >> "$LOG_FILE"
+    echo "$(date) Critical data (PM2.5) missing from API response" >> "$LOG_FILE"
     exit 1
 fi
 
@@ -51,4 +51,4 @@ fi
 # ---- APPEND ROW ----
 echo "$(date),$SENSOR_NAME,$SENSOR_INDEX,$LAT,$LON,$PM25_10MIN,$PM25_NOW,$PM10_0_NOW,$TEMP,$HUMIDITY,$PRESSURE,$VOC" >> "$CSV_FILE"
 
-echo "$(date) ✅ Row appended to $CSV_FILE (Sensor: $SENSOR_NAME)" >> "$LOG_FILE"
+echo "$(date) Row appended to $CSV_FILE (Sensor: $SENSOR_NAME)" >> "$LOG_FILE"
