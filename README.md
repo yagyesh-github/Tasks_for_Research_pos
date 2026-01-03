@@ -14,6 +14,22 @@ This section demonstrates the ability to automate data collection and handle API
 
 - Error Logging: Implements detailed logging to track successful API calls or connection failures.
 
+### Development Roadmap
+The automated data collection system reached its stable state in Version 9. This version is optimized for long-term research observations and high data integrity.
+
+- Version 4: Established initial API connection for a single sensor.
+
+- Version 5: Added multi-sensor support via command-line arguments.
+
+- Version 9 (Current): A comprehensive, automated tool featuring:
+
+  - Dual-Output Logic: Generates a "Curated" CSV for quick analysis and a "Full" CSV for deep-dive research.
+
+  - Dynamic Flattening: An advanced algorithm converts the entire nested JSON response into a flat CSV row.
+
+  - Automation-Ready: Uses absolute binary paths (e.g., /usr/bin/jq) for 100% reliability in cron background tasks.
+
+  - Fixed Data Repository: All data is centralized in a standardized directory for consistent file management.
 
 ## Task 2: Texas MAIAC AOD Contour Map
 This section highlights your data science skills, specifically working with satellite data formats and geospatial mapping.
