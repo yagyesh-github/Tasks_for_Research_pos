@@ -7,7 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1kamjdakAFWSiSie2Sxo1LV1DNVqmvnwr
 """
 
-!pip install cartopy
 import cartopy
 
 import xarray as xr
@@ -48,4 +47,4 @@ cbar.set_label('AOD Level')
 plt.title('Texas MAIAC AOD Contour Map (2024)')
 # Save the map
 plt.savefig('Texas_AOD_Contour_image.png', dpi=300, bbox_inches='tight')
-print("✅ Map saved as Texas_AOD_Contour_image.png")
+print("Map saved as Texas_AOD_Contour_image.png")
